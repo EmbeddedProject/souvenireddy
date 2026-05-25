@@ -39,6 +39,8 @@
       flex-direction: column;
       justify-content: flex-end;
       overflow: hidden;
+      max-width: 100%;
+      padding: 0;
     }
 
     .hero-img {
@@ -47,10 +49,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 40% top;
+      object-position: 50% 30%;
       filter: grayscale(25%) contrast(1.05);
-      min-width: 100%;
-      min-height: 100%;
     }
 
     .hero-overlay {
@@ -423,6 +423,10 @@
     }
 
     @media (max-width: 600px) {
+      .hero { min-height: 100svh; }
+      .hero-img { object-position: 45% 20%; }
+      .hero-content { padding: 0 5vw 4vh; }
+      .hero-name { font-size: clamp(2.8rem, 12vw, 4.5rem); }
       .road-line { left: calc(6vw + 22px); }
       .step { padding-left: 64px; }
     }
